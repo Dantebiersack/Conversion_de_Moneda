@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#101F71"
+    android:backgroundTint="#2840C6"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Conversor de pesos a dólares"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="190dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="84dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/banderas" />
+
+    <TextView
+        android:id="@+id/txtCambio"
+        android:layout_width="157dp"
+        android:layout_height="29dp"
+        android:text="Dólares a pesos"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/swCambio"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@+id/swCambio"
+        app:layout_constraintTop_toTopOf="@+id/swCambio"
+        app:layout_constraintVertical_bias="0.363" />
+
+    <Switch
+        android:id="@+id/swCambio"
+        android:layout_width="65dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="viewEnd"
+        android:textColor="#EFEDED"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/txtCambio"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/txtCantidad"
+        android:layout_width="191dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#4A63EC"
+        android:ems="10"
+        android:hint="Cantidad a convertir"
+        android:inputType="numberDecimal"
+        android:shadowColor="#FDFDFD"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#CFCDCD"
+        android:textColorLink="#FDFDFD"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtCambio"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="@+id/swCambio"
+        app:layout_constraintTop_toBottomOf="@+id/swCambio" />
+
+    <Button
+        android:id="@+id/btnConvertir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="248dp"
+        android:backgroundTint="#1A8AE3"
+        android:text="Convertir"
+        android:textColorHighlight="#EFDFDF"
+        android:textColorLink="#CDDC39"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtConversion"
+        app:layout_constraintStart_toStartOf="@+id/txtConversion"
+        app:layout_constraintTop_toBottomOf="@+id/txtConversion"
+        app:layout_constraintVertical_bias="0.215" />
+
+    <TextView
+        android:id="@+id/txtConversion"
+        android:layout_width="193dp"
+        android:layout_height="37dp"
+        android:background="#464E7C"
+        android:backgroundTint="#4A63EC"
+        android:shadowColor="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtCantidad"
+        app:layout_constraintStart_toStartOf="@+id/txtCantidad"
+        app:layout_constraintTop_toBottomOf="@+id/txtCantidad" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="244dp"
+        android:layout_height="178dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="@+id/btnConvertir"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/btnConvertir"
+        app:layout_constraintTop_toBottomOf="@+id/btnConvertir"
+        app:srcCompat="@drawable/banco" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Creado por: Miguel Angel RodriguezPadilla"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*Datos extraidos de la api del banco de México"
+        android:textColor="#EDEDED"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
